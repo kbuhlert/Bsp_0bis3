@@ -9,6 +9,9 @@ public class Beispiel_0 {
 
         String wettkampfergebnis = janneAhonen(50.1);
         System.out.println(wettkampfergebnis);
+
+        double autogeschwindigkeit = fahrgeschwindigkeit(3, 30, 'z'); //fahrtrichtung h=hin und z=zurück
+        System.out.println("Das Auto fährt mit " + autogeschwindigkeit + "km/h");
     }
 
     public static String lichtschalter_a (int schalter) {
@@ -48,6 +51,24 @@ public class Beispiel_0 {
 
         if (flugweite >50){
         return ergebnis;} else { return rettung;}
+    }
+
+    public static double fahrgeschwindigkeit (int gang, int windegeschwindigkeit, char fahrtrichtung){
+        int velocity = 0;
+        double velocityLessWind = 0;
+        switch (gang){
+            case 1: velocity = 10; break;
+            case 2: velocity = 20; break;
+            case 3: velocity = 30; break;
+            case 4: velocity = 40; break;
+        }
+        if (windegeschwindigkeit<=15){
+            velocityLessWind = velocity * 0.9;
+        }else if (windegeschwindigkeit<=25){velocityLessWind = velocity * 0.8;}
+        else{velocityLessWind = velocity * 0.6;}
+
+        if (fahrtrichtung == 'h'){return velocity;}
+        else{return velocityLessWind;}
     }
 
 }
