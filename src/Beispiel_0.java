@@ -7,8 +7,8 @@ public class Beispiel_0 {
         String lichtb = lichtschalter_b(1);
         System.out.println(lichtb);
 
-        String jannesFlug = janneAhonen(160);
-        System.out.println(jannesFlug);
+        String wettkampfergebnis = janneAhonen(50.1);
+        System.out.println(wettkampfergebnis);
     }
 
     public static String lichtschalter_a (int schalter) {
@@ -32,6 +32,8 @@ public class Beispiel_0 {
 
     public static String janneAhonen (double flugweite){
         String ergebnis;
+        String rettung = "Achtung Teilnehmer hat sich verletzt, bitte Rettung holen!";
+
         if (flugweite>198.7){
             ergebnis = "Erster Platz! Lauter Jubel!!!";
         }else if (flugweite>197.1 && flugweite<=198.7){
@@ -42,10 +44,10 @@ public class Beispiel_0 {
             ergebnis = "Vierter Platz! Not bad :-)";
         }else if (flugweite>150 && flugweite<193.67){
             ergebnis = "Nicht platziert";
-        }else if (flugweite>50 && flugweite<=150){
-            ergebnis = "Sprung war nicht weit genug. Disqualifiziert!";
-        }else { ergebnis = "Achtung Teilnehmer hat sich verletzt, bitte Rettung holen!";
-    } return ergebnis;
+        }else { ergebnis = "Sprung war nicht weit genug. Disqualifiziert!"; }
+
+        if (flugweite >50){
+        return ergebnis;} else { return rettung;}
     }
 
 }
