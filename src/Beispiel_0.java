@@ -1,17 +1,17 @@
 public class Beispiel_0 {
 
     public static void main(String[] args) {
-    String lichta = lichtschalter_a(1);      //Ausgabe für Bsp. 0a)
-        System.out.println(lichta);
+    String bsp0a = lichtschalter_a(1);      //Ausgabe für Bsp. 0a)
+        System.out.println(bsp0a);
 
-        String lichtb = lichtschalter_b(1);
-        System.out.println(lichtb);
+        String bsp0b = lichtschalter_b(1);
+        System.out.println(bsp0b);
 
-        String wettkampfergebnis = janneAhonen(50.1);
-        System.out.println(wettkampfergebnis);
+        String bsp0c = janneAhonen(50.1);
+        System.out.println("Der Sprung von Janne Ahonen hat folgendes Ergebnis: " + bsp0c);
 
-        double autogeschwindigkeit = fahrgeschwindigkeit(3, 30, 'z'); //fahrtrichtung h=hin und z=zurück
-        System.out.println("Das Auto fährt mit " + autogeschwindigkeit + "km/h");
+        double bsp0d = fahrgeschwindigkeit(4, 10, 'g'); //fahrtrichtung m=mitwind und g=gegenwind
+        System.out.println("Das Auto fährt mit " + bsp0d + "km/h");
     }
 
     public static String lichtschalter_a (int schalter) {
@@ -62,12 +62,14 @@ public class Beispiel_0 {
             case 3: velocity = 30; break;
             case 4: velocity = 40; break;
         }
-        if (windegeschwindigkeit<=15){
-            velocityLessWind = velocity * 0.9;
-        }else if (windegeschwindigkeit<=25){velocityLessWind = velocity * 0.8;}
-        else{velocityLessWind = velocity * 0.6;}
+        if (windegeschwindigkeit<=15)
+            {velocityLessWind = velocity * 0.9;}
+        else if (windegeschwindigkeit<=25)
+            {velocityLessWind = velocity * 0.8;}
+        else
+            {velocityLessWind = velocity * 0.6;}
 
-        if (fahrtrichtung == 'h'){return velocity;}
+        if (fahrtrichtung == 'm'){return velocity;} //fahrtrichtung m=mitwind und g=gegenwind
         else{return velocityLessWind;}
     }
 
