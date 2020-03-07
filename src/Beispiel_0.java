@@ -1,14 +1,17 @@
 public class Beispiel_0 {
 
     public static void main(String[] args) {
-    String lichta = Lichtschalter_a(1);      //Ausgabe für Bsp. 0a)
+    String lichta = lichtschalter_a(1);      //Ausgabe für Bsp. 0a)
         System.out.println(lichta);
 
-        String lichtb = Lichtschlter_b(1);
+        String lichtb = lichtschalter_b(1);
         System.out.println(lichtb);
+
+        String jannesFlug = janneAhonen(160);
+        System.out.println(jannesFlug);
     }
 
-    public static String Lichtschalter_a (int schalter) {
+    public static String lichtschalter_a (int schalter) {
        String ergebnis;
         if (schalter > 1) {
             ergebnis = "Licht an!"; }
@@ -17,7 +20,7 @@ public class Beispiel_0 {
         return ergebnis;
     }
 
-    public static String Lichtschlter_b (int schalter) {
+    public static String lichtschalter_b (int schalter) {
         String ergebnis;
         if (schalter == 1) {
             ergebnis = "Licht an!";
@@ -25,6 +28,24 @@ public class Beispiel_0 {
             ergebnis = "Licht aus!";
         }
         return ergebnis;
+    }
+
+    public static String janneAhonen (double flugweite){
+        String ergebnis;
+        if (flugweite>198.7){
+            ergebnis = "Erster Platz! Lauter Jubel!!!";
+        }else if (flugweite>197.1 && flugweite<=198.7){
+            ergebnis = "Zweiter Platz! Gut gemacht!!";
+        }else if (flugweite>195 && flugweite<=197.1){
+            ergebnis = "Dritter Platz! Ein tolles Ergebnis!";
+        }else if (flugweite>=193.67 && flugweite<=195){
+            ergebnis = "Vierter Platz! Not bad :-)";
+        }else if (flugweite>150 && flugweite<193.67){
+            ergebnis = "Nicht platziert";
+        }else if (flugweite>50 && flugweite<=150){
+            ergebnis = "Sprung war nicht weit genug. Disqualifiziert!";
+        }else { ergebnis = "Achtung Teilnehmer hat sich verletzt, bitte Rettung holen!";
+    } return ergebnis;
     }
 
 }
