@@ -31,8 +31,18 @@ public class Beispiel_2 {
 
 
     public static void main (String[] args){
-        int bsp2b = zumZiel(2, 4, 7);
-        if ( bsp2b>=1){System.out.println("Die Restliche Fahrzeit zum Ziel beträgt: " + bsp2b + " Minuten");}
+        int station = 2;
+        int baustellenStation = 2;
+        int zusatzZeit = 5;
+
+        int bsp2b = zumZiel(station, baustellenStation, zusatzZeit);
+        /*if ( bsp2b>=1){System.out.println("Die Restliche Fahrzeit zum Ziel beträgt: " + bsp2b + " Minuten");}
+        else{
+            System.out.println("Achtung: JETZT aussteigen!!!");}*/
+        if (baustellenStation>=station && station!=6){
+            System.out.println("Die Restliche Fahrzeit zum Ziel beträgt: " + bsp2b + " Minuten. Aufgrund einer Baustelle bei Station " + baustellenStation + " kommt es zu einer Verzögerung von " + zusatzZeit + " Minuten");
+        }
+        else if( baustellenStation<station && station!=6){System.out.println("Die Restliche Fahrzeit zum Ziel beträgt: " + bsp2b + " Minuten");}
         else{
             System.out.println("Achtung: JETZT aussteigen!!!");}
     }
