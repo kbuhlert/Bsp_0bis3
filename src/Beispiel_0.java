@@ -1,15 +1,19 @@
 public class Beispiel_0 {
 
     public static void main(String[] args) {
-    String bsp0a = lichtschalter_a(1);      //Ausgabe für Bsp. 0a)
+        //Ausgabe für Bsp. 0a)
+        String bsp0a = lichtschalter_a(1);
         System.out.println(bsp0a);
 
+        //Ausgabe für Bsp. 0b)
         String bsp0b = lichtschalter_b(1);
         System.out.println(bsp0b);
 
+        //Ausgabe für Bsp. 0c)
         String bsp0c = janneAhonen(50.1);
         System.out.println("Der Sprung von Janne Ahonen hat folgendes Ergebnis: " + bsp0c);
 
+       //Ausgabe für Bsp. 0d)
         double bsp0d = fahrgeschwindigkeit(4, 10, 'g'); //fahrtrichtung m=mitwind und g=gegenwind
         System.out.println("Das Auto fährt mit " + bsp0d + "km/h");
     }
@@ -54,14 +58,16 @@ public class Beispiel_0 {
     }
 
     public static double fahrgeschwindigkeit (int gang, int windegeschwindigkeit, char fahrtrichtung){
+
         int velocity = 0;
-        double velocityLessWind = 0;
+
         switch (gang){
             case 1: velocity = 10; break;
             case 2: velocity = 20; break;
             case 3: velocity = 30; break;
-            case 4: velocity = 40; break;
-        }
+            case 4: velocity = 40; break; }
+
+        double velocityLessWind;
         if (windegeschwindigkeit<=15)
             {velocityLessWind = velocity * 0.9;}
         else if (windegeschwindigkeit<=25)
