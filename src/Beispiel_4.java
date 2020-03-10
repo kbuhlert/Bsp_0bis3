@@ -17,6 +17,12 @@ public class Beispiel_4 {
         System.out.println("Das Jahr " + testJahr + " ist ein Schaltjahr ist: " + schaltjahr);
 
         //Ausgabe von 4d)
+        double einkommen = 20000;
+        double lohnsteuer = berechneLohnsteuer(einkommen);
+        double nettoeinkommen = einkommen-lohnsteuer;
+        System.out.println("Ihr Jahresbruttoeinkommen beträgt " + einkommen + "€");
+        System.out.println("Die Höhe Ihrer Steuer beträgt somit " + lohnsteuer + "€. Sie haben ein Nettoeinkommen von " + nettoeinkommen + "€");
+
             }
 
             //Methode für 4a)
@@ -29,8 +35,11 @@ public class Beispiel_4 {
             naechstesImpfungsjahr=3;}
         else{naechstesImpfungsjahr=5;}
 
-        return naechstesImpfungsjahr;
-    }
+        return naechstesImpfungsjahr; }
+
+        //Methode für 4b)
+
+
 
             //Methode für 4c)
     static boolean schaltjahr (int testJahr){
@@ -45,7 +54,28 @@ public class Beispiel_4 {
             schaltjahr=true; }
         else {schaltjahr = false;}
 
-        return schaltjahr;
+        return schaltjahr; }
+
+        //Methode für 4d)
+
+    static double berechneLohnsteuer (double einkommen){
+        double nettoeinkommen;
+
+        if(einkommen>1000000){
+            nettoeinkommen=(einkommen-1000000)*0.55 + 487880;}
+        else if (einkommen>90000){
+            nettoeinkommen=(einkommen-90000)*0.5 + 32880;}
+        else if (einkommen>60000){
+            nettoeinkommen=(einkommen-60000)*0.48 + 18480;}
+        else if (einkommen>31000){
+            nettoeinkommen=(einkommen-31000)*0.42 + 6300;}
+        else if (einkommen>18000){
+            nettoeinkommen=(einkommen-18000)*0.35 + 1750;}
+        else if (einkommen>11000){
+            nettoeinkommen=(einkommen-11000)*0.25;}
+        else {nettoeinkommen=einkommen;}
+
+        return nettoeinkommen;
     }
 
 }
