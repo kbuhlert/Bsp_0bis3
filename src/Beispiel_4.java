@@ -10,11 +10,24 @@ public class Beispiel_4 {
         System.out.println("Entsprechend Ihrer Daten erfolgt die nächste Impfung in " + naechstesImpfungsjahr + " Jahren.");
 
         //Ausgabe von 4b)
+        int[] f = new int[] {1,2,3,4,};
+        System.out.println(f[0]);
+        System.out.println(f[1]);
+        System.out.println(f[2]);
+        System.out.println(f[3]);
+        feldUmsortieren(f);
+        System.out.println("----");
+        System.out.println(f[0]);
+        System.out.println(f[1]);
+        System.out.println(f[2]);
+        System.out.println(f[3]);
 
         //Ausgabe von 4c)
         int testJahr = 1904;        //Eingabe des zu testen Jahres
         boolean schaltjahr = schaltjahr(testJahr);  //Abruf der Testmethode
-        System.out.println("Das Jahr " + testJahr + " ist ein Schaltjahr ist: " + schaltjahr);
+       if(schaltjahr){ System.out.println("Das Jahr " + testJahr + " ist ein Schaltjahr.");}
+       else{
+           System.out.println("Das Jahr " + testJahr + " ist KEIN Schaltjahr.");}
 
         //Ausgabe von 4d)
         double einkommen = 20000;
@@ -38,8 +51,15 @@ public class Beispiel_4 {
         return naechstesImpfungsjahr; }
 
         //Methode für 4b)
-
-
+    public static void feldUmsortieren (int[] feld){
+        int t;
+        t = feld[0];
+        feld[0] = feld[3];
+        feld[3] = t;
+        t = feld [1];
+        feld[1] = feld[2];
+        feld[2] = t;
+    }
 
             //Methode für 4c)
     static boolean schaltjahr (int testJahr){

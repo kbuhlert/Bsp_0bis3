@@ -1,9 +1,9 @@
 public class Beispiel_3 {
     public static void main(String[] args) {
         //Abruf Übung 3a)
-        double gewicht = 1;     //Gewicht des Hundes in kg
-        int letztesMal = 23;     // Wann war der Hund zum letzten mal spazieren in h
-        boolean vertraegtSich = true; //Verträgt sich der Hund mit anderen Hunden und kann gemeinsam mit anderen ausgeführt werden? true=Ja
+        double gewicht = 12;     //Gewicht des Hundes in kg
+        int letztesMal = 25;     // Wann war der Hund zum letzten mal spazieren in h
+        boolean vertraegtSich = false; //Verträgt sich der Hund mit anderen Hunden und kann gemeinsam mit anderen ausgeführt werden? true=Ja
 
         double wieWeit = wieWeitSpazieren(gewicht,letztesMal,vertraegtSich);
 
@@ -12,11 +12,16 @@ public class Beispiel_3 {
         //Abruf Übung 3b)
 
         int[] kuschelZeit = new int[3];     //Array für drei Kuschelzeiteinheiten in h
-        kuschelZeit[0] = 5;                 //hier Kuschelzeit 1-3 in Min angeben
+        kuschelZeit[0] = 10;                 //hier Kuschelzeit 1-3 in Min angeben
         kuschelZeit[1] = 20;
-        kuschelZeit[2] = 5;
+        kuschelZeit[2] = 40;
 
         boolean kuschelJaNein = kuschelbedarf(kuschelZeit);
+
+        if (kuschelJaNein){         //Ausgabe von einer Aussage abhängig vom Boolean, aber nicht den Boolean selber
+            System.out.println("Hurra es wird gekuschelt");
+        } else {
+            System.out.println("Bereits genug gekuschelt, der nächste ist dran");}
 
         System.out.println("Entsprechend obiger Parameter muss mit dem Hund gekuschelt werden: " + kuschelJaNein);
 
