@@ -23,14 +23,14 @@ public class Beispiel_4 {
         System.out.println(f[3]);
 
         //Ausgabe von 4c)
-        int testJahr = 1904;        //Eingabe des zu testen Jahres
+        int testJahr = 2020;        //Eingabe des zu testen Jahres
         boolean schaltjahr = schaltjahr(testJahr);  //Abruf der Testmethode
        if(schaltjahr){ System.out.println("Das Jahr " + testJahr + " ist ein Schaltjahr.");}
        else{
            System.out.println("Das Jahr " + testJahr + " ist KEIN Schaltjahr.");}
 
         //Ausgabe von 4d)
-        double einkommen = 20000;
+        double einkommen = 1000000;
         double lohnsteuer = berechneLohnsteuer(einkommen);
         double nettoeinkommen = einkommen-lohnsteuer;
         System.out.println("Ihr Jahresbruttoeinkommen beträgt " + einkommen + "€");
@@ -66,9 +66,9 @@ public class Beispiel_4 {
 
         boolean schaltjahr;
 
-        if(testJahr%4 == 0 && testJahr%1000 == 0){
+        if(testJahr%4 == 0 && testJahr%400 == 0){   //abfrage der 400er Jahre/ erster Test (durch 4 teilbahr) ist überflüssig, da alle die durch 400 teilbar sind sind immer auch durch 4 teilbar
             schaltjahr=true; }
-        else if(testJahr%4 == 0 && testJahr%100 == 0){
+        else if(testJahr%4 == 0 && testJahr%100 == 0){     //abfrage der 100er Jahre/ erster Test (durch 4 teilbahr) ist überflüssig, da alle die durch 100 teilbar sind sind immer auch durch 4 teilbar
             schaltjahr=false; }
         else if (testJahr%4 == 0){
             schaltjahr=true; }
@@ -79,23 +79,23 @@ public class Beispiel_4 {
         //Methode für 4d)
 
     static double berechneLohnsteuer (double einkommen){
-        double nettoeinkommen;
+        double steuer;
 
         if(einkommen>1000000){
-            nettoeinkommen=(einkommen-1000000)*0.55 + 487880;}
+            steuer=(einkommen-1000000)*0.55 + 487880;}
         else if (einkommen>90000){
-            nettoeinkommen=(einkommen-90000)*0.5 + 32880;}
+            steuer=(einkommen-90000)*0.5 + 32880;}
         else if (einkommen>60000){
-            nettoeinkommen=(einkommen-60000)*0.48 + 18480;}
+            steuer=(einkommen-60000)*0.48 + 18480;}
         else if (einkommen>31000){
-            nettoeinkommen=(einkommen-31000)*0.42 + 6300;}
+            steuer=(einkommen-31000)*0.42 + 6300;}
         else if (einkommen>18000){
-            nettoeinkommen=(einkommen-18000)*0.35 + 1750;}
+            steuer=(einkommen-18000)*0.35 + 1750;}
         else if (einkommen>11000){
-            nettoeinkommen=(einkommen-11000)*0.25;}
-        else {nettoeinkommen=einkommen;}
+            steuer=(einkommen-11000)*0.25;}
+        else {steuer=0;}
 
-        return nettoeinkommen;
+        return steuer;
     }
 
 }
