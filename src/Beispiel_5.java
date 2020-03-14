@@ -60,9 +60,9 @@ public static void main (String[] args){
         System.out.println("String 1 und String 2 enthalten nicht die gleiche Buchstabenfolge");}
 
         //Aufruf 5c: Zeilensumme eines Zweidimensionalen Arrays
-    int[][] new2DArray = new int[][] {{1,2,3},{5,5,5},{7,8,9}};
-    int zeilenAuswahl = 2;
-    System.out.println(zeilensumme(new2DArray,zeilenAuswahl));
+    int[][] new2DArray = new int[][] {{1,2,3},{5,5,5},{9,8,7}}; // hier 2D Array (3Zeilen, 3Spalten) befüllen
+    int zeilenAuswahl = 3;      //hier Zeile auswählen von der Summe gebildet werden soll
+    System.out.println(zeilensumme(new2DArray,zeilenAuswahl));  //Ausgabe der Zeilensumme
 
     }
 }
