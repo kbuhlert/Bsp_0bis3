@@ -2,28 +2,39 @@ import java.util.Arrays;
 
 public class Beispiel_7b {
     public static void main(String[] args) {
-        //String warMalZahl = zahlZuString(8);
-        System.out.println(zahlZuString(8) + 100);      //mit +100 teste ich ob Zahl tatsächlich als String ausgegeben,
-                                                        // wenn nicht dann Ausgabe 108 (Rechnung), sonst 8100("8"+"100")
-
-        String[] array1 = new String[20];
-        for(int index = 0; index<array1.length; index++){
-            String zahl = zahlZuString(index);
-            array1[index] = zahl; }
-        System.out.println(Arrays.toString(array1));
-
-    }
-    static String zahlZuString (int zahl){
-        String warMalZahl = String.valueOf(zahl);
-        return warMalZahl;
-    }
-
-
-    /*static String[] stringInArray (){
-        String[] array1 = new String[20];
-        for(int i=0; i>array1.length; i++){
-            array1[i] = zahlZuString(i);
+        for(int zahl = 1; zahl<=30; zahl++){
+            String fizzBuzz = fizzBuzzString(zahl);
+            System.out.println(fizzBuzz);
         }
-        return array1;
-    }*/
+        System.out.println("-----");
+        System.out.println(Arrays.toString(fizzBuzzArray()));
+
+
+    }
+
+    public static String fizzBuzzString (int zahl){
+        if (zahl%3==0 && zahl%5==0){
+            return "FizzBuzz";
+        } else if (zahl%3==0){
+            return "Fizz";
+        }else if (zahl%5==0){
+            return "Buzz";
+        }else{
+            String zahlWort = Integer.toString(zahl);
+            return zahlWort;
+        }
+    }
+
+    public static String [] fizzBuzzArray(){
+
+        int startwert = 1;
+        int stoppwert = 50;
+        int laenge = stoppwert-startwert;
+        String[] fizzBuzzArray = new String[laenge];
+        for(int zahl = 0; zahl<fizzBuzzArray.length; zahl++){
+            String fizzBuzz = fizzBuzzString(zahl);
+            fizzBuzzArray[zahl] = fizzBuzz;
+        }
+        return fizzBuzzArray;
+    }
 }

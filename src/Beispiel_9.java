@@ -9,9 +9,9 @@ public class Beispiel_9 {
         /*int fiboA = 0;
         int fiboB = 1;
         System.out.println(fiboA);
-        System.out.println(fiboB);
+        System.out.println(fiboB);*/
 
-        fibonaccRekurs(fiboA, fiboA);*/
+        fibonaccRekurs(0, 1);
 
 
         //b) While-Schleife Fbonacci
@@ -29,7 +29,7 @@ public class Beispiel_9 {
         }
 
         //c) Aufruf Fibonacci Array
-        int [] array1 = new int[15];
+        int [] array1 = new int[25];
         fibonacciArray(array1);
         System.out.println(Arrays.toString(array1));
 
