@@ -11,6 +11,23 @@ Beispiel:
 2   2   2				-> Zeilensumme dieser Zeile ist 6
 3   3   3				-> Zeilensumme dieser Zeile ist 9
 */
+    public static int zeilensumme (int[][] zweiDArray ,int zeile){
+        int zeilensumme = 0;
+        switch (zeile){
+            case 1:
+                zeilensumme = zweiDArray[0][0] + zweiDArray[0][1] + zweiDArray[0][2];
+                break;
+            case 2:
+                zeilensumme = zweiDArray[1][0] + zweiDArray[1][1] + zweiDArray[1][2];
+                break;
+            case 3:
+                zeilensumme = zweiDArray[2][0] + zweiDArray[2][1] + zweiDArray[2][2];
+                break;
+        }
+        return zeilensumme;
+    }
+
+
      public static void main(String[] args) {
        System.out.println(vergleiche("qwertzdfghjxcv", "ertz"));
 
@@ -24,6 +41,11 @@ Beispiel:
        for (int i=0; i<monate1.length; i++){
            System.out.println(monate1[i] + " [" + (i+1) + "]");
        }
+
+       int[][] zeilensumme ={{1,1,1},{2,2,2},{3,3,3}};
+         System.out.println(zeilensumme(zeilensumme,3));
+
+
 
    }
 
